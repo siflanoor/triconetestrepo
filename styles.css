@@ -509,7 +509,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
-  margin-left: 20%; /* Keep this if you need alignment */
+  margin-left: -10%; /* Keep this if you need alignment */
 }
 
 .call_expert i,
