@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title of the webpage -->
+    <title>TRI CONE</title>
+
+    <!-- link to css file -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- bootstrap links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- logo icon on the tab -->
+    <link rel="icon" href="images/logo.jpeg" type="image/gif" sizes="16x16" />
+  </head>
+
+  <body id="home">
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <nav class="navbar" id="nav_land">
+      <div class="logo">
+        <a href="./">
+          <img
+            src="images/tricone_logo.jpeg"
+            alt="Website Logo"
+            class="logo-img"
+            style="
+              width: 280px;
+              max-height: 60px;
+              background-color: transparent;
+              margin-left: 50px;
+            "
+          />
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#about_us">About</a></li>
+
+        <li class="servicess">
+          <a href="#" class="dropdown-toggle">Services</a>
+          <ul class="dropdown">
+            <li>
+              <a href="./templates/contracting.html">Building Contracting</a>
+            </li>
+            <li>
+              <a href="./templates/maintenance.html">Building Maintenance</a>
+            </li>
+            <li><a href="./templates/mep.html">MEP</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#contact_us">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+
+    <!-- about us section with moving image and qoutes -->
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide active">
+          <img src="images/slide3.jpg" alt="Slide 1" />
+          <div class="caption">
+            <h2>
+              PROVIDING HIGH-QUALITY CONSTRUCTION SOLUTIONS ACROSS ALL SECTORS.
+            </h2>
+            <a href="#contact_us" class="slider-btn">contact us</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/architecttt.jpg" alt="Slide 2" />
+          <div class="caption">
+            <h2>
+              OUR VISION :<br />
+              We believe in maintaining the highest standard of professionalism,
+              integrity, creativity, positive attitude, delivery that meets and
+              surpass expectations while offering prompt and lasting solutions
+              that stand the test of time.
+            </h2>
+            <a href="#services" class="slider-btn">our services</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/img1.jpg" alt="Slide 2" />
+          <div class="caption">
+            <h2>
+              OUR MISSION :<br />
+              We aim to be a world class engineering Construction Company
+              providing efficient affordable, sustainable, cost effective
+              services of highest level of quality.
+            </h2>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@triconecontracting.com"
+              target="_blank"
+              class="slider-btn"
+              >info@triconecontracting.com</a
+            >
+          </div>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- about us section with text -->
+    <div class="intro_row" id="about_us">
+      <h3 style="color: #0055a5">
+        TRI CONE contracting and general maintenance
+        <hr />
+        your trusted partner in comprehensive building maintenance and
+        contracting. a dynamic and forward-thinking company specializing in
+        building maintenance and contracting services.
+      </h3>
+      <p>
+        From residential to commercial, industrial to institutional, Tri cone
+        has the experience and expertise to handle all types of real estate
+        development projects.
+      </p>
+    </div>
+
+    <!-- our services section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p>Explore the wide range of services we offer.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-center p-3" id="card_style">
+              <a href="./templates/contracting.html"
+                ><i class="fa-solid fa-building-user display-1 text-info"></i
+              ></a>
+              <div class="card-body">
+                <h5 class="card-title">Building Contracting</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-center p-3" id="card_style">
+              <a href="./templates/maintenance.html"
+                ><i class="fa-solid fa-trowel-bricks display-1 text-info"></i
+              ></a>
+              <div class="card-body">
+                <h5 class="card-title">Building Maintenance</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card text-center p-3" id="card_style">
+              <a href="./templates/mep.html"
+                ><i class="fa-solid fa-plug-circle-bolt display-1 text-info"></i
+              ></a>
+              <div class="card-body">
+                <h5 class="card-title">MEP</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- qoutes section -->
+    <section class="p-3" id="quotes">
+      <h2
+        class="text-3xl font-bold flex items-center text-center justify-center gap-2 text-gray-900"
+      >
+        Quotes
+        <span class="text-teal-400">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 448 512"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          ></svg>
+        </span>
+      </h2>
+      <div
+        class="mt-6 grid gap-4 grid-cols-1 lg:grid-cols-3"
+        style="display: flex"
+        id="card_responsive"
+      >
+        <div
+          id="card_hover"
+          class="flex bg-white flex-col items-end relative max-w-xl p-8 rounded-lg transform transition duration-300 hover:scale-105 shadow-lg"
+        >
+          <div class="flex items-start justify-start">
+            <h2 text-teal-400 text-3xl>
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                ></path>
+              </svg>
+            </h2>
+          </div>
+          <p class="mt-4 p-3">
+            “You can dream, create, design and build the most wonderful place in
+            the world. But it requires people to make the dream a reality.”
+          </p>
+          <p class="font-bold italic">— Walt Disney</p>
+        </div>
+        <div
+          id="card_hover"
+          class="flex bg-white flex-col items-end relative max-w-xl p-8 rounded-lg transform transition duration-300 hover:scale-105 shadow-lg"
+        >
+          <div class="flex items-start justify-start">
+            <h2 flex items-start justify-star>
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                ></path>
+              </svg>
+            </h2>
+          </div>
+          <p class="mt-4 p-3">
+            “Construction is the art of making a meaningful whole out of many
+            parts. Buildings are witnesses to the human ability to construct
+            concrete things.”
+          </p>
+          <p class="font-bold italic">— Peter Zumthor</p>
+        </div>
+        <div
+          id="card_hover"
+          class="flex bg-white flex-col items-end relative max-w-xl p-8 rounded-lg transform transition duration-300 hover:scale-105 shadow-lg"
+        >
+          <div class="flex items-start justify-start">
+            <h2 flex items-start justify-star>
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z"
+                ></path>
+              </svg>
+            </h2>
+          </div>
+          <p class="mt-4 p-3">
+            “The most powerful force ever known on this planet is human
+            cooperation — a force for construction and destruction.”
+          </p>
+          <p class="font-bold italic">— Jonathan Haidt</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact us section -->
+    <section id="contact_us" class="contact_us">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Reach out to us with any questions or inquiries.</p>
+        <form action="" id="contactForm" onsubmit="return validateForm()">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="mobile">Mobile:</label>
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            placeholder="+971 "
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="abc@gmail.com"
+            required
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Type your message here...."
+            required
+          ></textarea>
+
+          <button type="submit" onclick="sendMail()">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- projects section -->
+    <section id="projects" class="projects">
+      <div class="flex-container">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/ongoing1.jpeg" alt="Ongoing Project 1" />
+            </div>
+            <div class="card-back">
+              <h3>Ongoing Project 1</h3>
+              <p>Details about the ongoing project...</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/ongoing2.jpeg" alt="Ongoing Project 2" />
+            </div>
+            <div class="card-back">
+              <h3>Ongoing Project 2</h3>
+              <p>Details about the ongoing project...</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/ongoing2.jpeg" alt="Ongoing Project 2" />
+            </div>
+            <div class="card-back">
+              <h3>Ongoing Project 2</h3>
+              <p>Details about the ongoing project...</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/ongoing2.jpeg" alt="Ongoing Project 2" />
+            </div>
+            <div class="card-back">
+              <h3>Ongoing Project 2</h3>
+              <p>Details about the ongoing project...</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+      <section id="footer">
+        <div class="container_footer">
+          <!-- contact us details div -->
+          <div class="column" id="col1">
+            <h6 class="footer_title">Reach us</h6>
+            <br />
+
+            <i class="fa fa-map-marker-alt"></i>
+            <p>
+              Musaffah - M10 - 29<br />
+              Abu Dhabi, UAE <br />
+              <i class="fa-solid fa-phone"></i> <br />
+
+              <a
+                href="tel:+971 50 820 5298"
+                style="text-decoration: none; color: aliceblue"
+              >
+                +971 50 820 5298</a
+              >
+              <br /><a
+                href="tel:+971 54 422 1080"
+                style="text-decoration: none; color: aliceblue"
+              >
+                +971 54422 1080</a
+              >
+              <br />
+
+              <i class="fa-solid fa-envelope-open"></i> <br />
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@triconecontracting.com"
+                target="_blank"
+                style="text-decoration: none; color: aliceblue"
+              >
+                info@triconecontracting.com
+              </a>
+            </p>
+            <hr />
+            <br />
+            <!-- social icons -->
+            <nav>
+              <ul>
+                <h6 class="footer_title">social</h6>
+                <li>
+                  <a
+                    href="https://wa.me/971508205298"
+                    target="_blank"
+                    class="social_icons"
+                    ><i class="fa-brands fa-square-whatsapp"></i
+                  ></a>
+                </li>
+                <!-- <li><a href="http://www.facebook.com/yourpagename" target="_blank" class="social_icons"
+                                      ><i class="fa-brands fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#http://www.linkedin.com/in/yourusername" class="social_icons"
+                                        ><i class="fa-brands fa-linkedin"></i></a>
+                                </li> -->
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@triconecontracting.com"
+                    target="_blank"
+                    class="social_icons"
+                    ><i class="fa-solid fa-envelope"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="tel:+971508205298" class="social_icons"
+                    ><i class="fa-solid fa-phone"></i
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- google map location div -->
+          <div class="column" id="col2">
+            <h6 class="footer_title">Location</h6>
+            <br />
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3454.4524908605617!2d54.50328837513568!3d24.37179407825146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDIyJzE4LjUiTiA1NMKwMzAnMjEuMSJF!5e1!3m2!1sen!2sae!4v1722784852105!5m2!1sen!2sae"
+              width="200"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+
+          <!-- quick links dic -->
+          <div class="column" id="col3">
+            <h6 class="footer_title">Quick links</h6>
+            <br />
+            <ul>
+              <a href="./">Home</a>
+              <br />
+              <a href="#about_us">About Us</a
+              ><br />
+              <a href="#services">Services</a
+              ><br />
+              <a href="#contact_us">Contact Us</a
+              ><br />
+            </ul>
+          </div>
+          <div style="margin-left: 50px">
+            <h1>"WOULD YOU LIKE TO DISCUSS A PROJECT"</h1>
+            <!-- Talk with an expert button -->
+            <div>
+              <a href="tel:+971508205298" class="call_expert">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>Let's Talk</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- download profile button -->
+      <div id="download-button">
+        <a href="images/Tricon.pdf" download>Download PDF</a>
+      </div>
+
+      <!-- Go to Top Button -->
+      <button onclick="topFunction()" id="topBtn" title="Go to top">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+
+      <!-- copyright text -->
+      <hr />
+      <div class="container">
+        <p>Copyright &copy; 2024 TRI CONE. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- script for contact us validation form -->
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var mobile = document.getElementById("mobile").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        if (name === "" || mobile === "" || email === "" || message === "") {
+          alert("Please fill in all fields.");
+          return false;
+        }
+        alert("Email Send !!");
+
+        return true;
+      }
+    </script>
+
+    <!-- emailjs -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "v9bcsUAzrdfAQH1iK",
+        });
+      })();
+    </script>
+  </body>
+</html>
