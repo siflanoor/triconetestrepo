@@ -33,7 +33,12 @@
     />
 
     <!-- logo icon on the tab -->
-    <link rel="icon" href="images/logo.jpeg" type="image/gif" sizes="16x16" />
+    <link
+      rel="icon"
+      href="../images/logo.jpeg"
+      type="image/gif"
+      sizes="16x16"
+    />
 
     <!-- scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -41,9 +46,9 @@
   </head>
 
   <body id="home">
-    <!-- <div id="preloader">
+    <div id="preloader">
       <div class="loader"></div>
-    </div> -->
+    </div>
 
     <nav class="navbar" id="nav_land">
       <div class="logo">
@@ -52,19 +57,13 @@
             src="../images/tricone_logo.jpeg"
             alt="Website Logo"
             class="logo-img"
-            style="
-              width: 280px;
-              max-height: 60px;
-              background-color: transparent;
-              margin-left: 50px;
-            "
           />
         </a>
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="../">Home</a></li>
 
-        <li><a href="../#about_us">About</a></li>
+        <li><a href="../#about_us">About Us</a></li>
 
         <li class="servicess">
           <a href="#" class="dropdown-toggle">Services</a>
@@ -79,7 +78,9 @@
           </ul>
         </li>
 
-        <li><a href="../#contact_us">Contact</a></li>
+        <li><a href="../#projects">Projects</a></li>
+
+        <li><a href="../#contact_us">Contact Us</a></li>
       </ul>
       <div class="hamburger" onclick="toggleMenu()">
         <div class="line"></div>
@@ -160,10 +161,10 @@
             </ul>
           </div>
         </div>
-
       </div>
     </section>
 
+    <!-- footer section -->
     <footer>
       <section id="footer">
         <div class="container_footer">
@@ -216,11 +217,11 @@
                   ></a>
                 </li>
                 <!-- <li><a href="http://www.facebook.com/yourpagename" target="_blank" class="social_icons"
-                                        ><i class="fa-brands fa-facebook"></i></a>
-                                  </li>
-                                  <li><a href="#http://www.linkedin.com/in/yourusername" class="social_icons"
-                                          ><i class="fa-brands fa-linkedin"></i></a>
-                                  </li> -->
+                                      ><i class="fa-brands fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#http://www.linkedin.com/in/yourusername" class="social_icons"
+                                        ><i class="fa-brands fa-linkedin"></i></a>
+                                </li> -->
                 <li>
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@triconecontracting.com"
@@ -258,20 +259,13 @@
           <!-- quick links dic -->
           <div class="column" id="col3">
             <h6 class="footer_title">Quick links</h6>
-            <br />
-            <ul>
-              <a href="../">Home</a>
-              <br />
-              <a href="../#about_us">About Us</a
-              ><br />
-              <a href="../#services">Services</a
-              ><br />
-              <a href="../#contact_us">Contact Us</a
-              ><br />
-            </ul>
+            <a href="../">Home</a><br />
+            <a href="../#about_us">About Us</a><br />
+            <a href="../#services">Services</a><br />
+            <a href="../#projects">Projects</a><br />
+            <a href="../#contact_us">Contact Us</a><br />
           </div>
-
-          <div style="margin-left: 50px">
+          <div style="margin-left: 10%">
             <h1>"WOULD YOU LIKE TO DISCUSS A PROJECT"</h1>
             <!-- Talk with an expert button -->
             <div>
@@ -285,8 +279,8 @@
       </section>
 
       <!-- download profile button -->
-      <div id="download-button">
-        <a href="../images/Tricon.pdf" download>Download PDF</a>
+      <div id="download-button" title="Download brochure">
+        <a href="../images/Tricon.pdf" download>Download</a>
       </div>
 
       <!-- Go to Top Button -->
@@ -320,5 +314,7 @@
         once: true,
       });
     </script>
+
+    <script src="../script.js"></script>
   </body>
 </html>
