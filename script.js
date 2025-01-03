@@ -96,14 +96,32 @@ function prevSlide() {
 
 
 //// projects
-let cards = document.querySelectorAll('.card');
-let currentIndex = 0;
+const projectsContainer = document.querySelector('.projects-container');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
 
-function showNextCard() {
-  cards[currentIndex].classList.remove('active');
-  currentIndex = (currentIndex + 1) % cards.length;
-  cards[currentIndex].classList.add('active');
-}
+let scrollPosition = 0;
 
-// You can set an interval to change cards automatically
-setInterval(showNextCard, 3000); // Switch every 3 seconds
+const cardWidth = 220; // Width of a card + gap (adjust if necessary)
+
+// Move projects container left
+leftArrow.addEventListener('click', () => {
+  scrollPosition += cardWidth;
+  if (scrollPosition > 0) {
+    scrollPosition = 0; // Prevent over-scrolling to the left
+  }
+  projectsContainer.style.transform = `translateX(${scrollPosition}px)`;
+});
+
+// Move projects container right
+rightArrow.addEventListener('click', () => {
+  const containerWidth = projectsContainer.scrollWidth;
+  const visibleWidth = projectsContainer.parentElement.offsetWidth;
+
+  if (Math.abs(scrollPosition) < containerWidth - visibleWidth) {
+    scrollPosition -= cardWidth;
+  } else {
+    scrollPosition = -(containerWidth - visibleWidth); // Prevent over-scrolling to the right
+  }
+  projectsContainer.style.transform = `translateX(${scrollPosition}px)`;
+});
