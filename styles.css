@@ -723,7 +723,7 @@ section h2 {
   }
 }
 
-@media  (max-width: 300px)  {
+@media (max-width: 300px) {
   .scroll img {
     width: 150px;
     height: 150px;
@@ -742,17 +742,17 @@ section h2 {
 }
 
 /* projects section */
-
 .projects {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
+/* Default card style */
 .project-card {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  width: 22%; /* Adjust width as needed */
+  width: 22%; /* Default width for larger screens */
   height: 350px; /* Custom height */
   margin-bottom: 20px;
   cursor: pointer;
@@ -761,14 +761,15 @@ section h2 {
   text-align: center;
   border: 2px solid black;
   display: flex;
-  flex-direction: column; /* Stacks image & text */
+  flex-direction: column; /* Image & text are stacked */
   justify-content: space-between;
 }
 
+/* Image settings */
 .project-img {
   width: 100%;
-  height: 75%; /* Image takes up 75% of the card */
-  object-fit: cover; /* Ensures image fits within its container */
+  height: 75%; /* Image takes 75% of card height */
+  object-fit: cover; /* Ensures image fits without distortion */
   transition: transform 0.3s ease;
 }
 
@@ -776,23 +777,25 @@ section h2 {
   transform: scale(1.1);
 }
 
+/* Title settings */
 .project-title {
   font-size: 18px;
   font-weight: bold;
   color: black;
-  height: 25%; /* Title takes up 25% of the card */
+  height: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
 }
 
+/* Overlay effect */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 25%; /* Ensures overlay only covers image */
+  bottom: 25%; /* Overlay only covers image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -811,21 +814,44 @@ section h2 {
   transform: rotate(-45deg);
 }
 
-/*Responsive Adjustments */
+/* Responsive Adjustments */
 
-
-@media (max-width: 800px) {
+/* Medium Screens (Tablets) */
+@media screen and (min-width: 700px) and (max-width: 1150px) {
   .project-card {
-    width: 150px;
-    height: 250px; /* Custom height for small screens */
+    width: 200px;
+    height: 300px;
   }
 
   .project-title {
-    font-size: 14px;
+    font-size: 16px;
     height: 20%;
   }
 
   .project-img {
     height: 80%;
+  }
+}
+
+/* Small Screens (Below 600px) → Stack Cards Vertically */
+@media (max-width: 600px) {
+  .projects {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+  }
+
+  .project-card {
+    width: 90%; /* Full width with margin */
+    height: auto; /* Let content determine height */
+  }
+
+  .project-img {
+    height: auto; /* Keep aspect ratio */
+  }
+
+  .project-title {
+    font-size: 16px;
+    height: auto;
+    margin-top: 10px;
   }
 }
