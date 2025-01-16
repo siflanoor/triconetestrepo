@@ -1,14 +1,29 @@
 ////navbar plus hamburger menu
 
+// Function to toggle the hamburger menu
 function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active");
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("active");
 }
 
+// Close the menu when clicking outside of it
+document.addEventListener('click', function (event) {
+  const navLinks = document.getElementById("navLinks");
+  const hamburger = document.querySelector('.hamburger');
+
+  // Check if the click is outside the menu or hamburger icon
+  if (
+      !navLinks.contains(event.target) && 
+      !hamburger.contains(event.target)
+  ) {
+      navLinks.classList.remove("active");
+  }
+});
+
 // Toggle dropdown on click for small screens
-document.querySelector('.dropdown-toggle').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.parentElement.classList.toggle('active');
+document.querySelector('.dropdown-toggle').addEventListener('click', function (e) {
+  e.preventDefault();
+  this.parentElement.classList.toggle('active');
 });
 
 
@@ -92,36 +107,3 @@ function nextSlide() {
 function prevSlide() {
   showSlide(currentSlide - 1);
 }
-
-
-
-//// projects
-const projectsContainer = document.querySelector('.projects-container');
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-
-let scrollPosition = 0;
-
-const cardWidth = 220; // Width of a card + gap (adjust if necessary)
-
-// Move projects container left
-leftArrow.addEventListener('click', () => {
-  scrollPosition += cardWidth;
-  if (scrollPosition > 0) {
-    scrollPosition = 0; // Prevent over-scrolling to the left
-  }
-  projectsContainer.style.transform = `translateX(${scrollPosition}px)`;
-});
-
-// Move projects container right
-rightArrow.addEventListener('click', () => {
-  const containerWidth = projectsContainer.scrollWidth;
-  const visibleWidth = projectsContainer.parentElement.offsetWidth;
-
-  if (Math.abs(scrollPosition) < containerWidth - visibleWidth) {
-    scrollPosition -= cardWidth;
-  } else {
-    scrollPosition = -(containerWidth - visibleWidth); // Prevent over-scrolling to the right
-  }
-  projectsContainer.style.transform = `translateX(${scrollPosition}px)`;
-});
