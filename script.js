@@ -107,3 +107,24 @@ function nextSlide() {
 function prevSlide() {
   showSlide(currentSlide - 1);
 }
+
+
+////projects section filtering
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  showProjects("completed"); // Show completed projects by default
+});
+
+function showProjects(category) {
+  let completedProjects = document.querySelectorAll(".project-card[data-category='completed']");
+  let ongoingProjects = document.querySelectorAll(".project-card[data-category='ongoing']");
+
+  if (category === "completed") {
+    completedProjects.forEach(project => project.style.display = "flex");
+    ongoingProjects.forEach(project => project.style.display = "none");
+  } else if (category === "ongoing") {
+    completedProjects.forEach(project => project.style.display = "none");
+    ongoingProjects.forEach(project => project.style.display = "flex");
+  }
+}
