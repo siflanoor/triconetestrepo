@@ -128,33 +128,3 @@ function showProjects(category) {
     ongoingProjects.forEach(project => project.style.display = "flex");
   }
 }
-
-
-
-///// to get clean url
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the current URL path (e.g., "/contracting")
-  let path = window.location.pathname;
-
-  // Define redirections (Clean URL → Actual HTML File)
-  let redirects = {
-      "/contracting": "/templates/contracting.html",
-      "/maintenance": "/templates/maintenance.html",
-      "/mep": "/templates/mep.html",
-      "/telal_masdar": "/templates/telal_masdar.html",
-      "/kizad_project1": "/templates/kizad_project1.html",
-      "/m15_project": "/templates/m15_project.html",
-      "/Park1_pakage_SH1_G1": "/templates/Park1_pakage_SH1_G1.html",
-      "/Park2_pakage_SH9_G1": "/templates/Park2_pakage_SH9_G1.html",
-      "/telal_mbz_drinage": "/templates/telal_mbz_drinage.html",
-      "/telal_mbz_slab": "/templates/telal_mbz_slab.html",
-      "/bateen_villa": "/templates/bateen_villa.html"
-  };
-
-  // If the path matches, redirect to the correct HTML file
-  if (redirects[path]) {
-      window.location.href = redirects[path];  // Redirect to the correct file
-  }
-});
