@@ -157,3 +157,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       history.replaceState(null, null, window.location.pathname); // Remove # from URL
   });
 });
+
+
+////////for removing index.html from the second scenario 
+
+if (window.location.pathname.endsWith("index.html")) {
+  window.history.replaceState(null, "", "/");
+}
