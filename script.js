@@ -128,3 +128,32 @@ function showProjects(category) {
     ongoingProjects.forEach(project => project.style.display = "flex");
   }
 }
+
+
+
+////// for removing # from url
+
+// 1️ Remove #id from URL after navigating from another page
+window.onload = function () {
+  if (window.location.hash) { // Check if URL has a #
+      let target = document.querySelector(window.location.hash);
+      if (target) {
+          target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to section
+      }
+      history.replaceState(null, null, window.location.pathname); // Remove # from URL
+  }
+};
+
+// 2️ Remove #id after clicking a link on the same page
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (event) {
+      event.preventDefault(); // Stop default jump
+
+      let target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+          target.scrollIntoView({ behavior: "smooth" }); // Smooth scrolling
+      }
+
+      history.replaceState(null, null, window.location.pathname); // Remove # from URL
+  });
+});
